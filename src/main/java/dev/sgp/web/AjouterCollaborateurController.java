@@ -22,7 +22,7 @@ public class AjouterCollaborateurController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		System.out.println(req.getParameterNames());
+		System.out.println(req.getParameter("nom"));
 		// Collaborateur newCollab = new Collaborateur(nom, prenom,
 		// dateNaissance, adresse, numSecu);
 		// collabService.sauvegarderCollaborateur(newCollab);

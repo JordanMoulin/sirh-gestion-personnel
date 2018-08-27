@@ -32,35 +32,35 @@
       <div class="form-group row">
         <label for="validationNom" class="col-sm-2 col-form-label">Nom</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="validationNom" required/>
+          <input name="nom" type="text" class="form-control" id="validationNom" required/>
           <div class="invalid-feedback">Le nom est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
         <label for="validationPrenom" class="col-sm-2 col-form-label">Prénom</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="validationPrenom" required/>
+          <input name="prenom" type="text" class="form-control" id="validationPrenom" required/>
           <div class="invalid-feedback">Le prénom est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
         <label for="validationDate" class="col-sm-2 col-form-label">Date de naissance</label>
         <div class="col-sm-10">
-          <input type="date" class="form-control" id="validationDate" required/>
+          <input name="date" type="date" class="form-control" id="validationDate" required/>
           <div class="invalid-feedback">La date de naissance est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
         <label for="validationAdresse" class="col-sm-2 col-form-label">Adresse</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="validationAdresse" required/>
+          <input name="adresse" type="text" class="form-control" id="validationAdresse" required/>
           <div class="invalid-feedback">L'adresse est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
         <label for="validationNumeroSecu" class="col-sm-2 col-form-label">Numéro de sécurité sociale</label>
         <div class="col-sm-10">
-          <input type="text" pattern="[0-9]{15}" class="form-control" id="validationNumeroSecu" required/>
+          <input name="secu" type="text" pattern="[0-9]{15}" class="form-control" id="validationNumeroSecu" required/>
           <div class="invalid-feedback">Le numéro de sécurité sociale est invalide.</div>
         </div>
       </div>
