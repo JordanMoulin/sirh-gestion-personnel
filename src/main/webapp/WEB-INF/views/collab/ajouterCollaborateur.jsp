@@ -1,3 +1,5 @@
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -18,9 +20,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">Collaborateurs</a>
+      	<a class="nav-item nav-link" href="<c:url value='lister' />">Collaborateurs</a>
         <a class="nav-item nav-link" href="#">Statistiques</a>
-        <a class="nav-item nav-link" href="#">Activités</a>
+        <a class="nav-item nav-link" href="#">ActivitÃ©s</a>
       </div>
     </div>
   </nav>
@@ -35,10 +37,10 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="validationPrenom" class="col-sm-2 col-form-label">Prénom</label>
+        <label for="validationPrenom" class="col-sm-2 col-form-label">PrÃ©nom</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="validationPrenom" required/>
-          <div class="invalid-feedback">Le prénom est invalide.</div>
+          <div class="invalid-feedback">Le prÃ©nom est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
@@ -56,15 +58,15 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="validationNumeroSecu" class="col-sm-2 col-form-label">Numéro de sécurité sociale</label>
+        <label for="validationNumeroSecu" class="col-sm-2 col-form-label">NumÃ©ro de sÃ©curitÃ© sociale</label>
         <div class="col-sm-10">
           <input type="text" pattern="[0-9]{15}" class="form-control" id="validationNumeroSecu" required/>
-          <div class="invalid-feedback">Le numéro de sécurité sociale est invalide.</div>
+          <div class="invalid-feedback">Le numÃ©ro de sÃ©curitÃ© sociale est invalide.</div>
         </div>
       </div>
       <div class="form-group row">
         <div class="col-sm-10">
-          <button type="submit" class="btn btn-primary"> Créer</button>
+          <button type="submit" class="btn btn-primary"> CrÃ©er</button>
         </div>
       </div>
     </form>
@@ -74,12 +76,12 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Fenêtre de confirmation</h5>
+						<h5 class="modal-title" id="exampleModalLabel">FenÃªtre de confirmation</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body" id="informations">Vous êtes sur le point d'ajouter un nouveau collaborateur</div>
+					<div class="modal-body" id="informations">Vous Ãªtes sur le point d'ajouter un nouveau collaborateur</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary"
 							data-dismiss="modal">Close</button>
@@ -130,7 +132,7 @@
 		var prenom = document.getElementById("validationPrenom").value;
 		var newP = document.createElement("p")
 		monNode = document.getElementById("informations");
-		textnode = document.createTextNode("Prénom : " + prenom);
+		textnode = document.createTextNode("PrÃ©nom : " + prenom);
 		newP.appendChild(textnode);
 		monNode.appendChild(newP);
 		
@@ -151,7 +153,7 @@
 		var numSecu = document.getElementById("validationNumeroSecu").value;
 		var newP = document.createElement("p")
 		monNode = document.getElementById("informations");
-		textnode = document.createTextNode("Numéro de sécurité social : " + numSecu);
+		textnode = document.createTextNode("NumÃ©ro de sÃ©curitÃ© social : " + numSecu);
 		newP.appendChild(textnode);
 		monNode.appendChild(newP);
 	}

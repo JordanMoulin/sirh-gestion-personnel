@@ -1,5 +1,7 @@
 <%@page import="java.util.List"%>
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,16 +10,12 @@
 		<title>SGP - App</title>
 	</head>
 	<body>
+	<a href="<c:url value='nouveau' />">Lien</a>
 		<h1>Les collaborateurs</h1>
 		<ul>
-		<%
-		List<String> listeNoms =(List<String>)request.getAttribute("listeNoms");
-		for (String nom : listeNoms) {
-		%>
-		<li><%= nom %></li>
-		<%
-		}
-		%>
+		<c:forTokens var="nom" items="${listeNoms}" delims=",">
+			<li> ${nom} </li>
+		</c:forTokens>
 		</ul>
 	</body>
 </html>
